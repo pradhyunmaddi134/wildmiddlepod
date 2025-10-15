@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wild Middle - Growing Up Different, Together</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A podcast and blog for neurodivergent teens and young adults navigating middle school, high school, and college. Real conversations about growing up different, together.">
+    <meta name="keywords" content="neurodivergent teens, autism, ADHD, high school, college transition, podcast, neurodiversity">
+    <meta name="author" content="The Wild Middle">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thewildmiddlepod.com/">
+    <meta property="og:title" content="The Wild Middle - Growing Up Different, Together">
+    <meta property="og:description" content="A podcast and blog for neurodivergent teens navigating the wild middle years from adolescence to independence.">
+    <meta property="og:image" content="https://thewildmiddlepod.com/cover-art.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thewildmiddlepod.com/">
+    <meta name="twitter:title" content="The Wild Middle - Growing Up Different, Together">
+    <meta name="twitter:description" content="A podcast and blog for neurodivergent teens navigating the wild middle years.">
+    <meta name="twitter:image" content="https://thewildmiddlepod.com/cover-art.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://thewildmiddlepod.com/">
+    
+    <!-- Favicon - Add your own -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #2f5a2f;
+            padding: 2rem 0;
+            border-bottom: 4px solid #A23B3C;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            opacity: 0.95;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        nav a:focus-visible {
+            outline: 2px solid #F7B5A0;
+            outline-offset: 4px;
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            margin: 3rem auto;
+            padding: 3rem;
+            max-width: 900px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #A23B3C;
+            margin: 0 0 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            max-width: 38ch;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #A23B3C;
+            color: white;
+            padding: 0.85rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 9999px;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: #8B3234;
+            transform: translateY(-1px);
+        }
+
+        .btn-primary:focus-visible {
+            outline: 3px solid #A23B3C;
+            outline-offset: 3px;
+        }
+
+        .hero-note {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        .hero-image {
+            justify-self: end;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 360px;
+            border: 8px solid #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .host-credit {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #A23B3C;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #A23B3C;
+            margin: 2.5rem 0 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #A23B3C;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #2f5a2f;
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .intro-box {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-left: 5px solid #A23B3C;
+            margin: 2rem 0;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid #6B8E6B;
+            background: rgba(107, 142, 107, 0.03);
+        }
+
+        /* Episodes */
+        .episode {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            padding-left: 2rem;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-left: 4px solid #A23B3C;
+        }
+
+        .episode h3 {
+            color: #A23B3C;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .episode-meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .episode-meta a {
+            color: #6B8E6B;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .episode-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .episode-hook {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .listen-button {
+            display: inline-block;
+            background: #A23B3C;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+        }
+
+        .listen-button:hover {
+            background: #8B3234;
+            transform: translateY(-1px);
+        }
+
+        .listen-button:focus-visible {
+            outline: 3px solid #A23B3C;
+            outline-offset: 3px;
+        }
+
+        .coming-soon {
+            background: #6B8E6B;
+            cursor: default;
+        }
+
+        .coming-soon:hover {
+            background: #6B8E6B;
+            transform: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #2f5a2f;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        footer h4 {
+            margin-bottom: 1rem;
+            color: #F7B5A0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer a:focus-visible {
+            outline: 2px solid #F7B5A0;
+            outline-offset: 3px;
+        }
+
+        .footer-section {
+            margin: 1.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                font-size: 17px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-image {
+                justify-self: center;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn-primary {
+                width: 100%;
+                text-align: center;
+            }
+
+            main {
+                padding: 2rem 1rem;
+                margin: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">The Wild Middle</div>
+            <div class="tagline">A podcast about growing up different</div>
+            <nav aria-label="Main navigation">
+                <a href="#listen">Listen</a>
+                <a href="#episodes">Episodes</a>
+                <a href="#about">About</a>
+                <a href="#contact">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section id="listen" class="hero">
+                <div class="hero-text">
+                    <h1>Growing up different, together.</h1>
+                    <p>Come as you are. This is a place for real connection and care through the messy teen years toward independence—open to ND and NT individuals and supporting adults, spanning middle school, high school, and college.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#episodes" class="btn-primary">▶️ Listen to Episode 1</a>
+                    </div>
+                    
+                    <p class="hero-note">Also available on: <a href="#" style="color:#A23B3C;font-weight:bold;">Apple Podcasts</a> • <a href="#" style="color:#A23B3C;font-weight:bold;">Spotify</a> • <a href="#" style="color:#A23B3C;font-weight:bold;">YouTube</a> • <a href="#" style="color:#A23B3C;font-weight:bold;">RSS</a></p>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="cover-art.jpg" alt="The Wild Middle podcast cover art" 
+                         style="width:360px;height:360px;border:8px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,0.1);border-radius:8px;display:block;">
+                    <p class="host-credit">Hosted by <strong>Pradhyun</strong> — living this transition, together.</p>
+                </div>
+            </section>
+
+            <!-- Episodes Section -->
+            <section id="episodes">
+                <h2>Recent Episodes</h2>
+
+                <div class="episode">
+                    <h3>Episode 1: Welcome to The Wild Middle</h3>
+                    <p class="episode-meta">Duration: 25 min • <a href="#">Transcript</a></p>
+                    <p class="episode-hook">From early intervention to isolation and back again—one teen's journey through the wild middle, and why we need each other to navigate it.</p>
+                    <p>Pradhyun shares his story: diagnosed with autism at three, thriving with support through elementary school, then moving to India with high hopes that turned hollow. Through middle school's fast-forward pace, Grade 9's breakthrough as a leader, and Grade 10's social breakdown, he realized something crucial—the support that carried him through childhood disappeared exactly when he needed it most. This episode is about that gap, the cycle of isolation, and why creating a community for neurodivergent teens navigating adolescence to independence isn't just helpful—it's essential. Real talk about what happens when you're expected to "have it figured out" but nobody taught you how.</p>
+                    <a href="#" class="listen-button">Listen on YouTube</a>
+                </div>
+
+                <div class="episode">
+                    <h3>Episode 2: In Conversation with Gautham</h3>
+                    <p class="episode-meta">Duration: 40 min • <a href="#">Transcript</a></p>
+                    <p class="episode-hook">A freshman in Ohio talks about middle school bullying, finding friends who get it, and why communicating with adults actually helped.</p>
+                    <p>Gautham shares what shifted from elementary to middle school—when being "weird" suddenly mattered and fitting in got harder. He talks honestly about being bullied over messages, why he struggled to connect with peers, and the moment his parents stepped in to help. Now in high school, he's navigating new social territory: finding friends who share his interests (Roblox, Pokémon, game design), learning from past mistakes, and figuring out how to be himself without the alienation. A conversation between cousins about autism, acceptance, and what it really means to ask for help.</p>
+                    <a href="#" class="listen-button">Listen on YouTube</a>
+                </div>
+
+                <div class="episode">
+                    <h3>Episode 3: In Conversation with William</h3>
+                    <p class="episode-meta">Coming Soon • <a href="#">Transcript</a></p>
+                    <p class="episode-hook">From standardized tests to pilot training—a recent high school grad shares what the college prep grind really looked like, and how following his passion kept him grounded.</p>
+                    <p>William just graduated high school and is now studying engineering at Ohio State University. He walks us through his journey preparing for college: the reality of standardized testing, balancing extracurriculars, and figuring out what actually matters on an application. But the conversation also goes somewhere unexpected—his passion for flying and pilot training. How does pursuing something you genuinely love change the pressure of the college process? A conversation about staying authentic while navigating all the expectations.</p>
+                    <a href="#" class="listen-button coming-soon">Coming Soon</a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about">
+                <h2>About This Podcast</h2>
+
+                <div class="intro-box">
+                    <p><strong>Growing up is messy. This podcast makes it feel less lonely.</strong></p>
+                </div>
+
+                <p>There are tons of resources for neurodivergent kids in elementary school — IEPs, early intervention, parent support groups. But then middle school hits, and suddenly everyone expects you to just... figure it out?</p>
+
+                <p>That's why this podcast exists.</p>
+
+                <p>The Wild Middle is a conversation space for anyone navigating the leap toward independence — from middle school through college — with a special focus on neurodivergent teens and young adults.</p>
+
+                <p>I'm hosting this while living this transition myself. Each episode blends my personal stories with those of friends, parents, educators, and guests from around the world.</p>
+
+                <p><strong>This is by us, for us</strong> — with the authenticity that only comes from shared experience.</p>
+
+                <h3>Who This Is For</h3>
+
+                <p><strong>Primary:</strong> Neurodivergent teens and young adults in middle school, high school, and college.</p>
+
+                <p><strong>Also:</strong> Parents of young children • Teachers, therapists, counselors, advocates • Anyone who's ever felt atypical.</p>
+
+                <h3>What We'll Talk About</h3>
+
+                <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                    <li style="margin-bottom: 0.75rem;">College applications and decision-making</li>
+                    <li style="margin-bottom: 0.75rem;">Building independence while staying connected to support</li>
+                    <li style="margin-bottom: 0.75rem;">Self-advocacy and speaking up for yourself</li>
+                    <li style="margin-bottom: 0.75rem;">Identity exploration during adolescence</li>
+                    <li style="margin-bottom: 0.75rem;">Navigating peer pressure and relationships</li>
+                    <li style="margin-bottom: 0.75rem;">Dealing with bullies and finding your people</li>
+                    <li style="margin-bottom: 0.75rem;">Discovering and pursuing your interests</li>
+                    <li style="margin-bottom: 0.75rem;">Practical life skills nobody teaches you</li>
+                </ul>
+
+                <div class="quote">
+                    "Maybe all we really need is to know we're going to be okay. Maybe we need to give that reassurance to each other."
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Listen</h4>
+                <a href="#">YouTube</a> • <a href="#">Apple Podcasts</a> • <a href="#">Spotify</a> • <a href="#">RSS Feed</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="mailto:hello@thewildmiddlepod.com">Email Us</a> • <a href="#">Discord</a>
+            </div>
+
+            <div class="footer-section">
+                <p style="margin-top: 2rem; opacity: 0.9;">&copy; 2025 The Wild Middle Podcast</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
